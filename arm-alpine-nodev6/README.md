@@ -4,7 +4,7 @@
 We will start with a minimal image based on the Linux distribution Alpine for
 ARM
 
-```
+```sh
 $ docker pull easypi/alpine-arm  
 ```
 
@@ -102,7 +102,7 @@ image out of `resin/armhf-alpine:latest` distribution.
 Now we will create a dockerfile that will automatize the creation of the base
 image and the installation of nodejs and npm.
 
-```
+```Dokerfile
 FROM easypi/alpine-arm
 MAINTAINER PiiXiieeS <email@gmail.com>
 RUN apk add nodejs
@@ -111,13 +111,13 @@ RUN apk add nodejs
 From the same directory of the dockerfile we can execute the command to build
 a new image.
 
-```
+```shell
 $ docker build -t piixiiees/arm-alpine-nodev6:v6 .
 ```
 
 The new image is listed and with a size of 32MB.
 
-```
+```shell
 REPOSITORY                    TAG                 IMAGE ID            CREATED SIZE
 piixiiees/arm-alpine-nodev6   v6                  504ca49a491c        9 minutes ago       32.12 MB
 piixiiees/node-alpine-arm     v6                  a4ff5ca388d3        4 hours ago         32.13 MB
@@ -128,7 +128,7 @@ alexellis2/ghost-on-docker    armv7               ba9e25b6aa98�
 Now we can create new containers with the nodejs installed in a base alpine
 image.
 
-```
+```shell
 $ docker run --name node-alpine -it piixiiees/arm-alpine-nodev6:v6 sh
 ```
 
