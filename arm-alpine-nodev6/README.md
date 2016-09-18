@@ -4,7 +4,7 @@
 We will start with a minimal image based on the Linux distribution Alpine for
 ARM
 
-```sh
+```Shell
 $ docker pull easypi/alpine-arm  
 ```
 
