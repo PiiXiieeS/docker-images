@@ -1,0 +1,5 @@
+# Base image from https://hub.docker.com/r/easypi/alpine-arm/
+# which is compiled from https://github.com/EasyPi/docker-alpine-arm/blob/master/Makefile
+FROM easypi/alpine-arm
+MAINTAINER Jose Gascon <piixiiees@gmail.com>
+RUN apk add nodejs
