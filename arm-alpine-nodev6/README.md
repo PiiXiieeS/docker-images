@@ -103,9 +103,9 @@ Now we will create a dockerfile that will automatize the creation of the base
 image and the installation of nodejs and npm.
 
 ```
-**FROM** easypi/alpine-arm
-**MAINTAINER** Jose Gascon &lt;piixiiees@gmail.com&gt;
-**RUN** apk add nodejs
+FROM easypi/alpine-arm
+MAINTAINER PiiXiieeS <email@gmail.com>
+RUN apk add nodejs
 ```
 
 From the same directory of the dockerfile we can execute the command to build
