@@ -16,17 +16,10 @@ The new image easypi/alpine-arm is less than 6MB !
 
 
 ```
-REPOSITORY                   TAG                 IMAGE ID            CREATED
-SIZE
-
-hypriot/rpi-node             latest              16bae966691d        2 weeks
-ago         475.8 MB
-
-easypi/alpine-arm            latest              4a9aaa4b4d58        11 weeks
-ago        5.999 MB
-
-alexellis2/ghost-on-docker   armv7               ba9e25b6aa98        4 months
-ago        884.7 MB
+REPOSITORY                   TAG                 IMAGE ID            CREATED SIZE
+hypriot/rpi-node             latest              16bae966691d        2 weeks ago         475.8 MB
+easypi/alpine-arm            latest              4a9aaa4b4d58        11 weeks ago        5.999 MB
+alexellis2/ghost-on-docker   armv7               ba9e25b6aa98        4 months ago        884.7 MB
 ```
 
 We can now run a container with that new image and the command line to install
@@ -44,8 +37,7 @@ From the command line we can use the following commends to inquire the version o
 / # uname -mrs
 Linux 4.4.13-v7+ armv7l
 / # uname -a
-Linux cf230398be61 4.4.13-v7+ #894 SMP Mon Jun 13 13:13:27 BST 2016 armv7l
-Linux
+Linux cf230398be61 4.4.13-v7+ #894 SMP Mon Jun 13 13:13:27 BST 2016 armv7l Linux
 ```
 
 Now we can use the package manager available in Alpine apk to install node and
@@ -80,8 +72,7 @@ and option `-a` to specify the author. We need to identify the container ID
 `organization/repository:tag`.
 
 ```
-$ docker commit -m "Added NodeJS to Alpine ARM Linux distribution" -a "Jose
-Gascon" 36136c1e0936 piixiiees/node-alpine-arm:v6  
+$ docker commit -m "Added NodeJS to Alpine ARM Linux distribution" -a "Jose Gascon" 36136c1e0936 piixiiees/node-alpine-arm:v6  
 ```
 
 Now at any time we can run a new container based on the new image running
@@ -95,28 +86,16 @@ Of course this new image is a bit larger than the original one but yet very
 small, just 32MB.
 
 ```
-REPOSITORY                   TAG                 IMAGE ID            CREATED
-SIZE
-
-piixiiees/node-alpine-arm    v6                  a4ff5ca388d3        2 hours
-ago         32.13 MB
-
-hypriot/rpi-node             latest              16bae966691d        2 weeks
-ago         475.8 MB
-
-easypi/alpine-arm            latest              4a9aaa4b4d58        11 weeks
-ago        5.999 MB
-
-alexellis2/ghost-on-docker   armv7               ba9e25b6aa98        4 months
-ago        884.7 MB
+REPOSITORY                   TAG                 IMAGE ID            CREATED SIZE
+piixiiees/node-alpine-arm    v6                  a4ff5ca388d3        2 hours ago         32.13 MB
+hypriot/rpi-node             latest              16bae966691d        2 weeks ago         475.8 MB
+easypi/alpine-arm            latest              4a9aaa4b4d58        11 weeks ago        5.999 MB
+alexellis2/ghost-on-docker   armv7               ba9e25b6aa98        4 months ago        884.7 MB
 ```
 
 This link contains a dokerfile and a compilation script to build a similar
 image out of `resin/armhf-alpine:latest` distribution.
-
 <https://github.com/resin-io/node-arm/tree/master/alpine/armhf>
-
-
 
 ### Creating a minimal docker image from a Dokerfile for the Raspberry PI 3
 
@@ -139,20 +118,11 @@ $ docker build -t piixiiees/arm-alpine-nodev6:v6 .
 The new image is listed and with a size of 32MB.
 
 ```
-REPOSITORY                    TAG                 IMAGE ID            CREATED
-SIZE
-
-piixiiees/arm-alpine-nodev6   v6                  504ca49a491c        9
-minutes ago       32.12 MB
-
-piixiiees/node-alpine-arm     v6                  a4ff5ca388d3        4 hours
-ago         32.13 MB
-
-easypi/alpine-arm             latest              4a9aaa4b4d58        11 weeks
-ago        5.999 MB
-
-alexellis2/ghost-on-docker    armv7               ba9e25b6aa98        4 months
-ago        884.7 MB
+REPOSITORY                    TAG                 IMAGE ID            CREATED SIZE
+piixiiees/arm-alpine-nodev6   v6                  504ca49a491c        9 minutes ago       32.12 MB
+piixiiees/node-alpine-arm     v6                  a4ff5ca388d3        4 hours ago         32.13 MB
+easypi/alpine-arm             latest              4a9aaa4b4d58        11 weeks ago        5.999 MB
+alexellis2/ghost-on-docker    armv7               ba9e25b6aa98        4 months ago        884.7 MB
 ```
 
 Now we can create new containers with the nodejs installed in a base alpine
